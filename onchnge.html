@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("input").change(function(){
+				alert("The text has been changed.");
+			});
+
+			$("#btn").click(function(){
+				$("#callpack").hide(2000,function(){
+					alert("paragraph hidden");
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<input type="text">
+
+	<p>Write something in the input field </p>
+	<button id="btn"> Hide</button>
+	<p id="callpack">test for callback effect</p>
+
+</body>
+</html>

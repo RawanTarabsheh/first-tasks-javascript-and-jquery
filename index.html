@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasks On JavaScript And Jquery</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custumstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+
+	<script type="text/javascript">
+		// price and sale
+		function myAmount() {  
+				var pepci= $("#pro1").val();
+				var chocolate=$("#pro2").val();
+				var chicken=$("#pro3").val();
+				var amount = pepci * 0.35;
+				var amount1 = chocolate * 1;
+				var amount2 = chicken * 3;	 
+				var total= amount + amount1 + amount2;	  
+				$("#qtypp").prop("value",amount.toFixed(2));
+				$("#qtych").prop("value" , amount1.toFixed(2));
+				$("#qtychin").prop("value" , amount2.toFixed(2));
+				$("#totalprice").html(total.toFixed(2));
+			}
+
+		$("document").ready(function(){
+			$("#test").click (function(){
+			// choose instractor
+		var value =$("input[name='name']:checked").val();
+		console.log(value);
+			if (value == 3)
+			{
+				
+				$(".n1").css("color","red");
+				$("#correct").css("color","green");
+			}  
+			else if (!value)
+			{
+				$("#show").html("Please Enter Value");
+				
+			}
+				else 
+			{
+				$(".n1").css("color","red");
+				$("#correct").css("color","red");
+			
+			}
+
+
+		});
+
+			//calcluter
+			$("button").click(function(){
+				var x=$("#fnum").val();
+				x= Number(x)// to convert input to number
+				var y=$("#snum").val();
+				y= Number(y);
+				var answer;
+				var value=$(this).val();
+				if(value == "add")
+				{
+					answer=parseFloat(x)+parseFloat(y);
+				}
+				else if (value== "sub")
+				{
+					answer= x-y;
+				}
+				else if (value == "multi")
+				{
+					answer=x*y;
+				}
+				else if(value == "div")
+				{
+					if(y==0)
+						$("#result").html("You can't Divide By Zero");
+					else
+						answer=x/y;
+				}
+				answer=answer.toFixed(2);
+				$("#result").html("The Result is  " + answer  );
+			});
+			
+			// Count Word
+			$("#myTextarea").keyup(function(){
+				var words = $('#myTextarea').val().split(' ');
+				var  x=words.length;
+				$("#count").html(x);
+				$("#count"). prepend("the Count of word is :");
+				if(x == 12 ){
+					$("#myTextarea").prop("disabled", true);
+					$("#send").click(function(){
+						$("#wordresult").html(words);
+					});
+				}
+				else{
+
+				}
+
+			});
+			// price and sale answer 2
+		/*	$("#sendprice").click(function(){
+				var pepci= $("#pro1").val();
+				pepci=pepci *0.35;
+				$("#qtypp").prop("value",pepci);
+
+				var chocolate=$("#pro2").val();
+				chocolate=chocolate* 1;
+				$("#qtych").prop("value" ,chocolate)
+
+				var total=pepci +chocolate;
+				$("#totalprice").html(total);
+
+
+			});*/ 
+
+
+				
+			//rocet
+			$(".fa-rocket").click(function(){
+				   $("html"). scrollTop( 0 );
+
+			});
+			$(document).scroll(function() { 
+   if($(window).scrollTop() > 300) {
+     $(".fa-rocket").show();
+   }
+   else
+   {
+   	$(".fa-rocket").hide();
+   }
+});
+
+		});
+
+	</script>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+	<!--Q!  -->
+	<div class="container">
+		<div class="row">
+			<div col-lg-6>
+				<h1 class="q1">What is the name of technical Istractor?</h1>
+			</div>
+			<div class="col-lg-6">
+				
+				<!--<form action="index.html" id="form1">-->
+					<div class="n1">
+						<input type="radio"  name="name" value="1">
+						<label>Ahmed</label>
+					</div>  
+					<div class="n1">
+						<input type="radio" class="n1" name="name" value="2">
+						<label >Anas</label>
+					</div>
+					<div id="correct">
+						<input type="radio"  name="name" value="3">
+						<label>Salameh</label>
+					</div>
+					<div class="n1">
+						<input type="radio" class="n1" name="name" value="4">
+						<label >Mai</label>
+					</div>
+					<br>
+					<button type="submit" class="btn btn-primary" id="test" value="Submit">Test My Answer</button>
+					<br>
+					<p id="show"></p>
+				<!--</form> -->
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+<div class="container pt-5">
+	<div class="row">
+		<div class="col-lg-6">
+		<!--	<form action="index.html">-->
+				<label for="fnum">First Number:</label>
+				<input type="Number" id="fnum" name="fnum"><br><br>
+				<label for="snum">Secand Number:</label>
+				<input type="Number" id="snum" name="lnum"><br><br>
+				<button value="add"> + </button>
+				<button value="sub"> - </button>
+				<button value="multi"> * </button>
+				<button value="div"> /</button>
+
+			<!--</form> -->
+			<p id="result"></p>
+		</div>
+		
+	</div>
+</div>
+
+<div class="container py-5">
+	<div class="row">
+		<div class="col-lg-6">
+			<h1>Talk About YourSelf in 12 Words</h1> 
+			<p id="count">	Count is :		</p>
+			<textarea id="myTextarea"></textarea>
+			<br>
+			<label class="btn btn-primary"  id="send">Send</label>
+			<p id="wordresult"></p>
+		</div>
+	</div>
+</div>
+
+<div class="container py-3">
+	<div class="row">
+		<div class="col-lg-12">
+		 <h2>Price & Sale</h2>
+  <table class="table table-bordered" style="border-color: red;">
+    <thead>
+      <tr>
+        <th>products</th>
+        <th>price</th>
+         <th>Qty </th>
+        <th>amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pepci</td>
+        <td>0.35</td>
+        <td> <input type="Number" name="pepci" id="pro1" size=5 onkeyup="myAmount()"></td>
+        <td> <input type="Number" name="qtyp" id="qtypp" ></td>
+
+      </tr>
+      <tr>
+        <td>Chocolate</td>
+        <td>1</td>
+        <td><input type="Number" name="chocolate" id="pro2" size=5 onkeyup="myAmount()"></td>
+         <td> <input type="Number" name="qtyc" id="qtych" ></td>
+
+      </tr>
+      <tr>
+			<td> Chicken </td>
+			<td>3 </td>
+			<td><input type="Number" name=" chicken" id="pro3" size=5  onkeyup="myAmount()"> </td>
+			<td> <input type="Number" name="qtychi" id="qtychin" ></td>
+		</tr>
+      <tr>
+        <td>total</td>
+        <td id="totalprice"></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+ <!-- <button id="sendprice">Sale</button> -->
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<i class="fas fa-rocket" style=" display:none;  position: fixed; top:300px; right:0; font-size: 50px;transform: rotate(-46deg); color: gray;"></i>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#a").click(function(){
+			$("#b").slideDown();
+		});
+		$("#c").click(function(){
+			$("#d").slideUp();
+		});
+		$("#e").click(function(){
+			$("#f").toggle(5000);
+		});
+		$("#stop").click(function(){
+			$("#f").stop();
+		});
+
+	});
+
+</script>
+<style type="text/css">
+	#b ,#a,#c,#d,#e,#f
+	{
+ background-color: gray;
+ text-align: center;
+  	}
+	#b 
+	{
+		display: none;
+		height: 50px;
+		padding-top: 10px;
+
+	}
+
+</style>
+</head>
+<body>
+	<div id="a">Click to slide Down</div>
+	<div id="b">Hello 	</div>
+	<br><br><br>
+	<div id="c"> Click to slide up</div>
+	<div id="d"> Hello </div>
+
+	<br><br><br>
+	<button id="stop">stop slid</button>
+	<div id="e"> Click to slide up And down</div>
+	<div id="f"> Hello </div>
+</body>
+</html>

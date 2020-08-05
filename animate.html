@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#document").ready(function(){
+		$(".btn").click(function(){
+			$(".a").animate({
+				left:'150px',
+				opacity :'0.5',
+				height:'+=150px',
+				width:'+=150px'
+		});
+		});
+
+		$(".btntoggle").click(function(){
+			$(".b").animate({
+				height:'toggle'});
+		});
+
+		$(".btnmulti").click(function(){
+			var div = $(".c");
+			div.animate({height:'300px' , opacity:'0.4'},"slow");
+			div.animate({width:'300px', opacity:'0.8'},"slow");
+			div.animate({height:'100px',opacity:'0.4'},"slow");
+			div.animate({width:'100px',opacity:'0.8'},"slow");
+		});
+
+		$(".btnmultif").click(function(){
+			var div= $(".d");
+			div.animate({left :'200px'},"slow");
+			div.animate({fontSize : '3em'},"slow");
+		});
+		$("#clickme").click(function(){
+			$("#para").css("color","red").slideUp(2000).slideDown(2000);
+		})
+	});
+</script>
+</head>
+<body>
+	<button class="btn">start Animate</button>
+	<br><br>
+<div class="a" style="width: 100px;height: 100px; background-color: pink; position: absolute;"></div>
+ <br><br>
+
+ <button class="btntoggle" style="margin-top: 100px;"> Click to toggle</button>
+ <br><br>
+ <div class="b" style="background-color: red; height: 100px; width: 100px;"></div>
+<br><br>
+
+ <button class="btnmulti" style="margin-top: 100px;"> Click to multi animate</button>
+ <br><br>
+ <div class="c" style="background-color: red; height: 100px; width: 100px;"></div>
+
+<br><br>
+
+ <button class="btnmultif" style="margin-top: 100px;"> Click to multi animate</button>
+ <br><br>
+ <div class="d" style="background-color: red; height: 100px; width: 100px; position: absolute;"> hello</div>
+
+ <br><br>
+ <!-- -->
+ <p id="para" style="margin-top: 250px;">multi effect using Jquery</p>
+ <button id="clickme"> Click me</button>
+</body>
+</html>

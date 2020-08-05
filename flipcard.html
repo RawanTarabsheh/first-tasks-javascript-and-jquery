@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasks On JavaScript And Jquery</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custumstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.flip.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
+	<script type="text/javascript">
+		$("document").ready(function(){
+			$("#card").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card2").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card3").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card4").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+
+			$("#card5").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card6").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card7").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$("#card8").flip({
+				axis: 'y',
+				trigger: 'hover'
+			});
+			$(".back").click(function(){
+				$("#card").off(".flip");
+			}) ;    
+		});
+
+	</script>
+</head>
+<body>
+	<div class="container border border-secondary py-5">
+		<div class="row">
+			<div class="col-lg-3">
+				<div id="card"> 
+					<div class="front" > 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" value="c1">
+						<img src="images/cat1.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-lg-3">
+				<div id="card2"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c2">
+						<img src="images/cat3.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+			<div class="col-lg-3">
+				<div id="card3"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c2">
+						<img src="images/cat3.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+			<div class="col-lg-3">
+				<div id="card4"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c1">
+						<img src="images/cat1.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+		</div>
+		
+
+			<div class="row mt-5">
+			<div class="col-lg-3">
+				<div id="card5"> 
+					<div class="front" > 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" value="c1">
+						<img src="images/dog1.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-lg-3">
+				<div id="card6"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c2">
+						<img src="images/dog3.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+			<div class="col-lg-3">
+				<div id="card7"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c2">
+						<img src="images/dog1.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+			<div class="col-lg-3">
+				<div id="card8"> 
+					<div class="front"> 
+						<img src="images/flip.jpg" style="width: 200px; height: 200px">
+					</div> 
+					<div class="back" id="c1">
+						<img src="images/dog3.jpg" style="width: 200px; height: 200px">
+					</div> 
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

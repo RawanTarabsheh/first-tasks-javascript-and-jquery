@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+ $("document").ready(function(){
+ 	$("#a").click(function(){
+ 		$("#a").hide();
+ 	});
+
+ 	$("#b").dblclick(function(){
+	$("#b").hide();
+ 	});
+ 	$("#c").mouseenter(function(){
+	alert("You entered p3!");
+ 	});
+
+ 	$("#d").mouseleave(function(){
+ 		alert("You leave p4")
+ 	});
+
+ 	$("#d").mousedown(function(){
+ 		alert("You mouse press down p4")
+ 	});
+ 	$("#e").mouseup(function(){
+ 		alert("You mouse up p4");
+ 		$("#e").css("color","red");
+ 	});
+ 	$("#a").hover(function(){
+ 		$(this).css("color","red");
+ 	});
+ 	  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+
+ });
+</script>
+</head>
+<body>
+
+<p>Click or move the mouse pointer over this paragraph.</p>
+
+<p id="a">click me to hide</p>
+<p id="b"> double click to hide</p>
+<p id="e">mouse up</p>
+<p id="c">the mouse pointer enters </p>
+<p id="d">the mouse pointer leaves </p>
+
+<br><br>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+</body>
+</html>

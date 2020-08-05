@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("document").ready (function(){
+	    	//alert(123);
+	    	var	x=" rawan ";
+	    	x+=" is ";
+	    	x+=" a";
+	    	x+=" Fullstack ";
+	    	$("#a").html(x);
+
+	    	$("#a").css("color","red");
+	    	$("p:first").css("color","red");
+	    	$("p:last").css("color","gray");
+	    	$("p:odd").css("color","pink");
+	    	$("p:even").css("color","blue");
+	    	$("h1").html("Rawan");
+	    	$("h1").append("    JQuery ");
+	    	$("h1").prepend(" Wellcom to ");
+
+	    	$("#btn1").click(function(){
+	    		$(".b").hide(1000);
+	    	});
+	    	$("#btn2").click(function(){
+	    		$(".b").show(1000);
+	    	});
+	    	$("#btn3").click(function(){
+	    		$(".b").toggle(1000);
+	    	});
+
+	    	$("#btn4").click(function(){
+	    		$(".b").fadeIn(1000);
+	    	});
+	    	$("#btn5").click(function(){
+	    		$(".b").fadeOut(1000);
+	    	});
+
+	    	$("#btn6").click(function(){
+	    		$(".c").fadeToggle(2000);
+	    	});
+
+	    	$("#btn7").click(function()
+	    	{
+	    		$(".c").fadeTo(2000,0.5);
+
+	    	});
+
+	    });
+
+	</script>
+</head>
+<body>
+	<button id="btn1" style="background-color: red;">Hide</button>
+	<button id="btn2" style="background-color: green">Show</button>
+	<button id="btn3" style="background-color: blue">Show / hide</button>
+	<button id="btn4" style="background-color: blue">Fadein</button>
+	<button id="btn5" style="background-color: blue">fadeout</button>
+	<button id="btn6" style="background-color: blue">fadetoggle</button>
+	<button id="btn7" style="background-color: blue">fadeTo</button>
+
+	<div class="b">
+		<h1>Rawan</h1>
+		<div id="a"></div>
+		<p> This Is a paragraph</p>
+		<p> This Is a paragraph</p>
+		<p> This Is a paragraph</p>
+		<p> This Is a paragraph</p>
+		<p> This Is a paragraph</p>
+	</div>
+	<div class="c" style="width: 200px; height:  150px; background-color: red">FadeTo Opcity 0.5</div>
+
+</body>
+</html>
